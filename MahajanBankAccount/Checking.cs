@@ -35,7 +35,10 @@ namespace MahajanBankAccount
             Console.WriteLine("Your checking account balance is: $" +chAccountBalance);
         }
 
-        
+        public string DepositOrWitht()
+        {
+            return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
+        }
 
         public double CheckDepositAmount()
         {

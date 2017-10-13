@@ -26,8 +26,8 @@ namespace MahajanBankAccount
                             while (userChar == 'a')
                                 { Checking checking = new Checking(552711, "Checking", 50177.17d, 20113.50d);
                                   checking.GetAccountInfo();
-                                    Console.WriteLine("Would you like to: \n1. Deposit Funds \n2. Withdraw Funds");
-                                    int checkUserChoice = int.Parse(Console.ReadLine());
+                                  Console.WriteLine(checking.DepositOrWitht());
+                                  int checkUserChoice = int.Parse(Console.ReadLine());
 
                                         while (checkUserChoice == 1)
                                             {Console.WriteLine("How much would you like to deposit?");
@@ -40,6 +40,7 @@ namespace MahajanBankAccount
                             while (userChar == 'b')
                                 {Savings savings = new Savings(552712, "Savings", 50177.17d, 30063.67);
                                  savings.GetAccountInfo();
+                    
                                 }
                     }
 
