@@ -26,15 +26,17 @@ namespace MahajanBankAccount
                             while (userChar == 'a')
                                 { Checking checking = new Checking(552711, "Checking", 50177.17d, 20113.50d);
                                   checking.GetAccountInfo();
-                                  Console.WriteLine(checking.DepositOrWitht());
+                                  Console.WriteLine(checking.DepositOrWith());
                                   int checkUserChoice = int.Parse(Console.ReadLine());
 
                                         while (checkUserChoice == 1)
-                                            {Console.WriteLine("How much would you like to deposit?");
+                                            { Console.WriteLine(checking.DepositMoney());
                                              double deposit = double.Parse(Console.ReadLine());
                                              Console.WriteLine("Your new balance is $"+ (deposit + checking.CheckDepositAmount()));
                                              break;
                                             }
+                                        while (checkUserChoice == 2)
+                    {
                                 }
 
                             while (userChar == 'b')

@@ -35,7 +35,7 @@ namespace MahajanBankAccount
             Console.WriteLine("Your checking account balance is: $" +chAccountBalance);
         }
 
-        public string DepositOrWitht()
+        public string DepositOrWith()
         {
             return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
         }
@@ -44,7 +44,16 @@ namespace MahajanBankAccount
         {
             chAccountBalance += deposit;
             return chAccountBalance;
-            
+        }
+
+        public override string DepositMoney()
+        {
+            return "How much would you like to deposit?";
+        }
+
+        public override string WithMoney()
+        {
+            return "How much would you like to withdraw?";
         }
 
 

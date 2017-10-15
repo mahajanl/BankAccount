@@ -52,8 +52,14 @@ namespace MahajanBankAccount
             Console.WriteLine("Account Type: {0} \nYour total account balance is: ${1}", accountType, accountBalance);
         }
 
-        public virtual void DepositMoney()
+        public virtual string DepositMoney()
         {
+            return "How much would you like to deposit?";
+        }
+
+        public virtual string WithMoney()
+        {
+            return "How much would you like to withdraw?";
         }
 
     }
