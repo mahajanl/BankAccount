@@ -37,9 +37,7 @@ namespace MahajanBankAccount
         }
 
         public double SaveDepositAmount()
-        {
-           saveAccountBalance += deposit;
-            return saveAccountBalance;
+        {return saveAccountBalance + deposit;
         }
 
         public override string DepositOrWith()

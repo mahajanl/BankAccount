@@ -12,6 +12,7 @@ namespace MahajanBankAccount
         public double accountBalance;
         public string accountType;
         public double deposit;
+        public double withdraw;
 
         //props
         public double Deposit

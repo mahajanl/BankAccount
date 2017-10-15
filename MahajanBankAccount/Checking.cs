@@ -31,31 +31,23 @@ namespace MahajanBankAccount
 
         public override void GetAccountInfo()
         {
-            base.GetAccountInfo();
-            Console.WriteLine("Your checking account balance is: $" +chAccountBalance);
+            Console.WriteLine("Your checking account balance is: $" + (chAccountBalance + deposit - withdraw));
         }
 
         public override string DepositOrWith()
-        {
-            return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
+        {return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
         }
 
-        public double CheckDepositAmount()
-        {
-            chAccountBalance += deposit;
-            chAccountBalance = chAccountBalance + deposit;
-            return chAccountBalance;
-            
+        public double CheckBalance()
+        {return chAccountBalance;
         }
 
         public override string DepositMoney()
-        {
-            return "How much would you like to deposit?";
+        {return "How much would you like to deposit?";
         }
 
         public override string WithMoney()
-        {
-            return "How much would you like to withdraw?";
+        {return "How much would you like to withdraw?";
         }
 
 
