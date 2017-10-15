@@ -62,5 +62,9 @@ namespace MahajanBankAccount
             return "How much would you like to withdraw?";
         }
 
+        public virtual string DepositOrWith()
+        { return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
+        }
+
     }
 }

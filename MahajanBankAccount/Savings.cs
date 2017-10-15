@@ -35,5 +35,17 @@ namespace MahajanBankAccount
             base.GetAccountInfo();
             Console.WriteLine("Your checking account balance is: $" + saveAccountBalance);
         }
+
+        public double SaveDepositAmount()
+        {
+           saveAccountBalance += deposit;
+            return saveAccountBalance;
+        }
+
+        public override string DepositOrWith()
+        {
+            return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
+        }
+
     }
 }

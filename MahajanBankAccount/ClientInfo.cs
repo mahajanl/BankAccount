@@ -48,9 +48,7 @@ namespace MahajanBankAccount
         }
 
         public ClientInfo(int genAccountNum, string name, double totalBalance)
-        {
-            Console.WriteLine("WELCOME to your user-friendly Banking System, {0}! Your account balance is ${1}. What would you like to look into today?", name, totalBalance);
-            this.genAccountNum = genAccountNum;
+        {   this.genAccountNum = genAccountNum;
             this.name = name;
             this.totalBalance = totalBalance;
         }
@@ -68,7 +66,10 @@ namespace MahajanBankAccount
             Console.WriteLine("Total Balance (Checking and Savings): $" + totalBalance);
         }
 
-
+        public void PrintInfo()
+        {
+            Console.WriteLine("WELCOME to your user-friendly Banking System, {0}! Your account balance is ${1}. What would you like to look into today?", name, totalBalance);
+        }
 
 
     }
