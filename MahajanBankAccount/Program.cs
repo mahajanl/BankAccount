@@ -128,7 +128,6 @@ namespace MahajanBankAccount
                                 {Console.WriteLine("Transaction cannot be completed without overdrawing account. Please enter another amount.");
                                  break;
                                 }
-                                
                         }
 //PROBLEM
                         else if (withChoice == 'b')
