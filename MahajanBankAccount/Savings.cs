@@ -22,9 +22,9 @@ namespace MahajanBankAccount
         {
         }
 
-        public Savings(int accountNumber, string accountType, double accountBalance)
+        public Savings(int accountNumber, string accountType)
         {
-            this.accountBalance = accountBalance;
+            this.accountBalance = 50177.17d;
             this.accountNumber = accountNumber;
             this.accountType = accountType;
             this.saveAccountBalance = 30063.67d;
@@ -42,7 +42,12 @@ namespace MahajanBankAccount
 
         public override string DepositOrWith()
         {
-            return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
+            return base.DepositOrWith();
+        }
+
+        public override string WithMoney()
+        {
+            return "How much would you like to withdraw?";
         }
 
     }

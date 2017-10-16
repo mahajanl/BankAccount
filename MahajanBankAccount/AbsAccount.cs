@@ -41,11 +41,11 @@ namespace MahajanBankAccount
         {
         }
 
-        public AbsAccount(int accountNumber, string accountType, double accountBalance)
+        public AbsAccount(int accountNumber, string accountType)
         {
             this.accountNumber = accountNumber;
             this.accountType = accountType;
-            this.accountBalance = accountBalance;
+            this.accountBalance = 50177.17d;
         }
 
         public virtual void GetAccountInfo()
@@ -67,5 +67,9 @@ namespace MahajanBankAccount
         { return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
         }
 
+        public virtual double FinalBalance()
+        {
+            return (accountBalance + deposit - withdraw);
+        }
     }
 }

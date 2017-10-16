@@ -13,6 +13,8 @@ namespace MahajanBankAccount
         public double totalBalance = 50177.17;
         public double checkBalance;
         public double savBalance;
+        public double deposit;
+        public double withdraw;
 
         //properties; need to be available to all; BUT changed the 1st three to static and I don't need these for the static guys
         public int GenAccountNum
@@ -54,23 +56,25 @@ namespace MahajanBankAccount
         }
 
         //METHODS
-        public void GetClientInfo()
-        {   Console.WriteLine("Client Name: " + name);
-            Console.WriteLine("Client Account Number: " +genAccountNum);
-            Console.WriteLine("Total Balance (Checking and Savings): $" + totalBalance);
-            Console.WriteLine();
+        public string GetClientInfo()
+        {   return "Client Name: " + name;
         }
 
-        public void GetTotalBalance()
+        public string GetTotalBalance()
         {
-            Console.WriteLine("Total Balance (Checking and Savings): $" + totalBalance);
+            return "Total Balance: $" +totalBalance;
+        }
+
+        public string GetAccountNum()
+        { return "Account Number: " + genAccountNum;
         }
 
         public void PrintInfo()
         {
-            Console.WriteLine("WELCOME to your user-friendly Banking System, {0}! Your account balance is ${1}. What would you like to look into today?", name, totalBalance);
+            Console.WriteLine("WELCOME, {0}! Your account balance is ${1}.", name, totalBalance);
         }
 
+        
 
     }
 }

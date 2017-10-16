@@ -21,9 +21,9 @@ namespace MahajanBankAccount
         {
         }
 
-        public Checking(int accountNumber, string accountType, double accountBalance)
+        public Checking(int accountNumber, string accountType)
         {
-            this.accountBalance = accountBalance;
+            this.accountBalance = 50177.17d;
             this.accountNumber = accountNumber;
             this.accountType = accountType;
             this.chAccountBalance = 20113.50d;
@@ -35,7 +35,9 @@ namespace MahajanBankAccount
         }
 
         public override string DepositOrWith()
-        {return "Would you like to: \n1.Deposit Funds \n2.Withdraw Funds";
+        {
+            return base.DepositOrWith();
+            
         }
 
         public double CheckBalance()
