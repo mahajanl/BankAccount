@@ -47,10 +47,10 @@ namespace MahajanBankAccount
 
         }
 
-        public ClientInfo(int genAccountNum, string name, double totalBalance)
+        public ClientInfo(int genAccountNum, string name)
         {   this.genAccountNum = genAccountNum;
             this.name = name;
-            this.totalBalance = totalBalance;
+            this.totalBalance = 50177.17d;
         }
 
         //METHODS

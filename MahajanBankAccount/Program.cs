@@ -10,13 +10,13 @@ namespace MahajanBankAccount
     {
         static void Main(string[] args)
         {
-            ClientInfo client = new ClientInfo(55271, "Michelle Wolf", 50177.17d);
+            ClientInfo client = new ClientInfo(55271, "Michelle Wolf");
             
             client.PrintInfo();
             Console.WriteLine();
             Console.WriteLine("Choose the corresponding number from the following options and TYPE it below: \n1. Total Bank Account Balance \n2. Client Information \n3. Deposit Funds \n4. Withdraw Funds \n5. Exit");
-            Checking checking = new Checking(552711, "Checking", 50177.17d, 20113.50d);
-            Savings savings = new Savings(552712, "Savings", 50177.17d, 30063.67);
+            Checking checking = new Checking(552711, "Checking", 50177.17d);
+            Savings savings = new Savings(552712, "Savings", 50177.17d);
 
             //user input for choice - need to have 5 different options
             int userChoice = int.Parse(Console.ReadLine());
@@ -43,7 +43,6 @@ namespace MahajanBankAccount
                                               double withdraw = double.Parse(Console.ReadLine());
                                               Console.WriteLine("Your new balance is $" + (checking.CheckBalance() - withdraw));
                                             }
-                    
                                 }
                 
                      //savings
@@ -62,14 +61,16 @@ namespace MahajanBankAccount
                                         while (saveUserChoice == "2")
                                         { Console.WriteLine(savings.WithMoney());
                                             double withdraw = double.Parse(Console.ReadLine());
+
                                                 if (withdraw < savings.SaveAccountBalance)
                                                 { Console.WriteLine("Your new balance is $" + (savings.SaveDepositAmount() - withdraw));
                                                 }
                                                 else if (withdraw > savings.SaveAccountBalance)
                                                 { Console.WriteLine("Transaction cannot be completed without overdrawing account. Please enter another amount.");
-                                                 
                                                 }
-                                        }
+                                                else
+                                                { Console.WriteLine("That's not a valid choice. Try again.");
+                                                }
                                 }
                     }
 
@@ -85,12 +86,29 @@ namespace MahajanBankAccount
                                    double savDepo = double.Parse(Console.ReadLine());
                                    Console.WriteLine("Your new balance is $ " + (savDepo + savings.SaveDepositAmount()));
                                  }
-                    
+                             else if (depoChoice == 'b')
+                                { Console.WriteLine(checking.CheckBalance());
+                                  double checkDepo = double.Parse(Console.ReadLine());
+                                  Console.WriteLine("Your new balance is $ " + (checkDepo + checking.CheckBalance()));
+                                }
 
                     }
 
                 while (userChoice == 4)
-                    {
+                    {Console.WriteLine("Would you like to withdraw from your: \na. Savings \nb.Checking");
+                        char withChoice = char.Parse(Console.ReadLine());
+                        if (withChoice == 'a')
+                        {
+                            Console.WriteLine(savings.DepositMoney());
+                            double saveWith = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Your new balance is $ " + (savings.SaveDepositAmount()- saveWith ));
+                        }
+                        else if (withChoice == 'b')
+                        {
+                            Console.WriteLine(checking.CheckBalance());
+                            double checkWith = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Your new balance is $ " + (checking.CheckBalance()-checkWith));
+                        }
 
                     }
                 while (userChoice == 5)
@@ -98,7 +116,7 @@ namespace MahajanBankAccount
                       //LOOK FOR THE EXIT DEALIO
                     }
 
-
+}
 
         }
 

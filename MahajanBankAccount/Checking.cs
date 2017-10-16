@@ -21,12 +21,12 @@ namespace MahajanBankAccount
         {
         }
 
-        public Checking(int accountNumber, string accountType, double accountBalance, double chAccountBalance)
+        public Checking(int accountNumber, string accountType, double accountBalance)
         {
             this.accountBalance = accountBalance;
             this.accountNumber = accountNumber;
             this.accountType = accountType;
-            this.chAccountBalance = chAccountBalance;
+            this.chAccountBalance = 20113.50d;
         }
 
         public override void GetAccountInfo()
